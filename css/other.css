@@ -1,0 +1,83 @@
+*, *:after, *:before { vertical-align: top; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; -moz-osx-font-smoothing: subpixel-antialiased; -webkit-font-smoothing: subpixel-antialiased; -moz-font-smoothing: subpixel-antialiased; -ms-font-smoothing: subpixel-antialiased; -o-font-smoothing: subpixel-antialiased; }
+
+.iconImg { display: inline-block; width: 100%; max-width: 30px; }
+
+.visionImg { display: inline-block; width: 100%; max-width: 1085px; }
+
+.newsImgBg { display: inline-block; width: 100%; position: absolute; z-index: -1; bottom: -75px; left: 0; }
+@media screen and (max-width: 449px) and (min-width: 0) { .newsImgBg { bottom: -19px; } }
+
+.titleImg { display: inline-block; width: 100%; max-width: 700px; }
+
+.indexNews-l { display: inline-block; width: 100%; max-width: 262px; position: absolute; left: 10px; bottom: 0; }
+@media screen and (max-width: 1024px) and (min-width: 770px) { .indexNews-l { max-width: 212px; } }
+@media screen and (max-width: 769px) and (min-width: 450px) { .indexNews-l { max-width: 162px; } }
+@media screen and (max-width: 449px) and (min-width: 0) { .indexNews-l { display: none; } }
+
+.indexNews-r { display: inline-block; width: 100%; max-width: 243px; position: absolute; right: 10px; bottom: 0; }
+@media screen and (max-width: 1024px) and (min-width: 770px) { .indexNews-r { max-width: 193px; } }
+@media screen and (max-width: 769px) and (min-width: 450px) { .indexNews-r { max-width: 173px; } }
+@media screen and (max-width: 449px) and (min-width: 0) { .indexNews-r { display: none; } }
+
+.footerImg { display: inline-block; width: 100%; max-width: 200px; position: absolute; right: 10px; bottom: 0; }
+@media screen and (max-width: 1024px) and (min-width: 770px) { .footerImg { max-width: 150px; } }
+@media screen and (max-width: 769px) and (min-width: 450px) { .footerImg { max-width: 120px; } }
+@media screen and (max-width: 449px) and (min-width: 0) { .footerImg { display: none; } }
+
+.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 60px 0; }
+.embed-container.member_share { margin: 0 0 20px 0; }
+.embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+@media screen and (max-width: 769px) and (min-width: 0) { .embed-container { margin: 35px 0; } }
+
+.pageImg_l { display: inline-block; width: 100%; max-width: 253px; float: left; }
+@media screen and (max-width: 1024px) and (min-width: 770px) { .pageImg_l { max-width: 200px; } }
+@media screen and (max-width: 769px) and (min-width: 450px) { .pageImg_l { max-width: 150px; } }
+@media screen and (max-width: 449px) and (min-width: 0) { .pageImg_l { max-width: 120px; } }
+
+.pageImg_r { display: inline-block; width: 100%; max-width: 419px; float: right; margin-top: 69px; }
+@media screen and (max-width: 1024px) and (min-width: 770px) { .pageImg_r { max-width: 369px; margin-top: 40px; } }
+@media screen and (max-width: 769px) and (min-width: 450px) { .pageImg_r { max-width: 319px; margin-top: 2px; } }
+@media screen and (max-width: 449px) and (min-width: 0) { .pageImg_r { display: none; } }
+
+.tf_boxs { display: inline-block; width: 100%; padding: 10px 20px; color: white; font-size: 1.2rem; }
+.tf_boxs.to { background-color: #f79646; }
+.tf_boxs.tored { background-color: red; }
+.tf_boxs.togreen { background-color: green; }
+
+@media screen and (min-width: 0) and (max-width: 769px) { .table { display: block; width: 100%; background-color: white; }
+  .table .tr { display: block; }
+  .table .tr .td { display: block; border-right: 1px solid #f79646; border-bottom: 1px solid #f79646; border-left: 1px solid #f79646; text-align: left; padding: 10px; color: black; }
+  .table .tr .td.tll { border-left: 1px solid #f79646; }
+  .table .tr .td.tdd { border-bottom: 2px solid #f79646; }
+  .table .tr .td:before { content: attr(title); display: inline-block; width: 120px; font-size: .8rem; color: #f79646; font-weight: 600; } }
+@media screen and (min-width: 770px) { .table { display: table; width: 100%; background-color: white; }
+  .table .tr { display: table-row; *zoom: 1; }
+  .table .tr:after { display: table; content: ""; line-height: 0; clear: both; }
+  .table .tr .td { display: table-cell; border-right: 1px solid #f79646; border-bottom: 1px solid #f79646; font-size: 1rem; color: black; padding: 10px 0; }
+  .table .tr .td.tl { border-left: 1px solid #f79646; }
+  .table .tr:first-child .td { position: relative; }
+  .table .tr:first-child .td:before { content: attr(title); display: inline-block; width: 100%; background-color: #fdeada; font-size: 1rem; color: black; padding: 10px 0; margin-top: -10px; margin-bottom: 10px; }
+  .table .tr:first-child .td.to:before { border-bottom: 1px solid #f79646; } }
+.theader { display: inline-block; width: 100%; }
+
+.border_TD_p { border-top: 2px dotted #e75440; border-bottom: 2px dotted #e75440; }
+
+/* flexslider */
+.flexslider { position: relative; width: 100%; height: 595px; overflow: hidden; }
+@media screen and (max-width: 449px) and (min-width: 0) { .flexslider { height: 220px; } }
+
+.slides { position: relative; z-index: 1; list-style: none; margin: 0; padding: 0; -moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px; overflow: hidden; }
+.slides li { height: 525px; }
+@media screen and (max-width: 449px) and (min-width: 0) { .slides li { height: 151px; } }
+.slides li a { display: block; width: 100%; height: 100%; text-align: left; text-indent: -9999px; }
+
+.flex-control-nav { position: absolute; bottom: 10px; z-index: 2; width: 100%; text-align: center; padding-left: 0; }
+.flex-control-nav li { display: inline-block; width: 14px; height: 14px; margin: 05px; *display: inline; zoom: 1; }
+.flex-control-nav a { display: inline-block; width: 14px; height: 14px; line-height: 40px; overflow: hidden; background: url(../img/dot.png) right 0 no-repeat; cursor: pointer; }
+.flex-control-nav .flex-active { background-position: 0 0; }
+
+.flex-direction-nav { position: absolute; z-index: 3; left: 0; width: 100%; top: 45%; list-style: none; }
+.flex-direction-nav li { list-style: none; }
+.flex-direction-nav li a { display: block; width: 50px; height: 50px; overflow: hidden; cursor: pointer; position: absolute; }
+.flex-direction-nav li a.flex-prev { left: 60px; }
+.flex-direction-nav li a.flex-next { right: 60px; }

@@ -1,0 +1,283 @@
+@import "Ginkgo";
+@import "color";
+
+p {
+  margin: 0;
+}
+
+.dayOrange {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: white;
+  background-color: $orange;
+  @include border-radius(30px);
+  padding: 10px 15px;
+  float: left;
+
+  @include range-width(0, 770px) {
+    font-size: 1.2rem;
+    width: 140px;
+  }
+}
+
+.t-16-title {
+  display: inline-block;
+  font-size: 1.1rem;
+  color: white;
+  margin-right: 25px;
+  float: left;
+
+  &:before {
+    display: inline-block;
+    content: attr(title);
+    font-weight: bolder;
+  }
+
+  @include range-width(0, 450px) {
+    font-size: 1rem;
+    text-align: left;
+    margin-right: 0;
+  }
+}
+
+.t-40 {
+  display: inline-block;
+  width: calc(100% - 253px - 419px);
+  font-size: 2.3rem;
+  font-weight: bolder;
+  text-align: left;
+  margin-top: 238px;
+  position: relative;
+
+  @include range-width(770px, 1025px) {
+    width: calc(100% - 200px - 369px);
+    margin-top: 179px;
+  }
+
+  @include range-width(450px, 770px) {
+    width: calc(100% - 150px - 319px);
+    margin-top: 120px;
+  }
+
+  @include range-width(0, 450px) {
+    width: auto;
+    font-size: 1.6rem;
+    text-align: left;
+    margin-top: 100px;
+    float: left;
+  }
+
+  &.b-w40 {
+    &:after {
+      width: 40%;
+    }
+  }
+
+   &.b-w30 {
+    &:after {
+      width: 30%;
+    }
+  }
+
+  &:after {
+    display: inline-block;
+    content: '';
+    width: 50%;
+    position: relative;
+    bottom: -40px;
+    right: -18px;
+
+    @include range-width(450px, 770px) {
+      width: 30%;
+    }
+
+    @include range-width(0, 450px) {
+      display: none;
+    }
+  }
+
+  &.colorOrange {
+    color: $orange;
+
+    &:after {
+      border-bottom: 2px dotted $orange;
+    }
+  }
+
+  &.colorBlue {
+    color: $blue;
+
+    &:after {
+      border-bottom: 2px dotted $blue;
+    }
+  }
+
+  &.colorPurple {
+    color: $purple-d;
+
+    &:after {
+      border-bottom: 2px dotted $purple-d;
+    }
+  }
+
+  &.colorPinkorange {
+    color: $pinkorange;
+
+    &:after {
+      border-bottom: 2px dotted $pinkorange;
+    }
+  }
+
+  &.colorGreen {
+    color: $green;
+
+    &:after {
+      border-bottom: 2px dotted $green;
+    }
+  }
+}
+
+.big_title {
+  display: inline-block;
+  font-size: 2.3rem;
+  font-weight: bolder;
+  text-align: left;
+
+  @include range-width(0, 450px) {
+    font-size: 1.7rem;
+  }
+
+  &.b-t-pu {
+    color: $purple-d;
+  }
+
+  &.b-t-blue {
+    color: $blue;
+  }
+
+  &.b-t-green {
+    color: $green;
+  }
+
+  &.b-t-pinkorange {
+    color: $pinkorange;
+  }
+
+  &.h-t {
+    &:before {
+      display: inline-block;
+      content: attr(title);
+      background-color: $yellow;
+      color: #272822;
+      margin-right: 20px;
+      font-size: 1.2rem;
+      padding: 10px 20px;
+      @include border-radius(30px);
+    }
+  }
+}
+
+.t_p18 {
+  display: inline-block;
+  width: 100%;
+  font-size: 1.3rem;
+  color: rgba(61, 61, 58, 1.00);
+  text-align: left;
+  line-height: 1.5;
+
+  @include range-width(0, 450px) {
+    font-size: 1.2rem;
+  }
+
+  .tp18_link {
+    display: inline-block;
+    font-size: 1.3rem;
+    color: $orange;
+    text-decoration: underline;
+
+    @include range-width(0, 450px) {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.t_p18_b {
+  display: inline-block;
+  width: 100%;
+  font-size: 1.3rem;
+  color: rgba(61, 61, 58, 1.00);
+  text-align: left;
+  line-height: 1.5;
+  font-weight: bolder;
+
+  @include range-width(0, 450px) {
+    font-size: 1.2rem;
+  }
+}
+
+.add_type {
+  font-size: 1.2rem;
+  color: black;
+  text-align: left;
+  padding-bottom: 10px;
+  line-height: 30px;
+
+  @include range-width(0, 450px) {
+    font-size: 1.1rem;
+  }
+
+  &.order_use {
+    &:before {
+      float: left;
+      line-height: 100px;
+
+      @include range-width(0, 450px) {
+        line-height: 20px;
+      }
+    }
+  }
+
+  &.a-t-white {
+    color: white;
+
+    &:before {
+      color: white;
+    }
+  }
+
+  &.add_all_before {
+    &:before {
+      width: 100%;
+    }
+  }
+
+  &:before {
+    display: inline-block;
+    content: attr(title);
+    font-weight: bolder;
+  }
+
+  &.a-t-pinkorange {
+    &:before {
+      color: $pinkorange;
+    }
+  }
+
+  &.a-t-blue {
+    &:before {
+      color: $blue;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+

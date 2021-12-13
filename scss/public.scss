@@ -1,0 +1,366 @@
+@import "Ginkgo";
+@import "color";
+@import "font";
+@import "link";
+@import "space";
+@import "other";
+
+body {
+  position: relative;
+
+  display: inline-block;
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+  color: rgba(90, 90, 90, 1.00);
+
+  font-size: 13px;
+  text-align: center;
+  font-family: "微軟正黑體", "Open sans", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+  background-color: $purple;
+
+  &.indexColor {
+    background-color: $blue;
+  }
+}
+
+.all-close {
+  display: inline-block !important;
+
+  @include range-width(0, 770px) {
+    display: none !important;
+  }
+}
+
+.all-open {
+  display: none  !important;
+
+  @include range-width(0, 770px) {
+    display: inline-block !important;
+  }
+}
+
+.ipad-close {
+  display: inline-block !important;
+
+  @include range-width(450px, 770px) {
+    display: none !important;
+  }
+}
+
+.ipad-open {
+  display: none !important;
+
+  @include range-width(450px, 770px) {
+    display: inline-block !important;
+  }
+}
+
+.mobile-close {
+  display: inline-block !important;
+
+  @include range-width(0, 450px) {
+    display: none !important;
+  }
+}
+
+.mobile-open {
+  display: none !important;
+
+  @include range-width(0, 450px) {
+    display: inline-block !important;
+  }
+}
+
+.order-l {
+  float: left !important;
+}
+
+.order-r {
+  float: right !important;
+}
+
+.text-l {
+  text-align: left;
+}
+
+.text-r {
+  text-align: right;
+}
+
+.boxWF {
+  display: inline-block;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.all_boxs {
+  display: inline-block;
+  width: 100%;
+  @include clearfix();
+
+  img {
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+.boxIn {
+  display: inline-block;
+}
+
+.boxIn2 {
+  display: inline-block;
+  width: 100%;
+}
+
+.boxFull {
+  display: inline-block;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0, auto;
+  @include clearfix();
+
+  @include range-width(0, 1025px) {
+    padding: 0 15px;
+  }
+
+  &.fullPo {
+    position: relative;
+  }
+}
+
+.boxs50 {
+  display: inline-block;
+  width: calc(100% / 2 - 40px * 1 / 2);
+  margin-right: 40px;
+  float: left;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include range-width(0, 450px) {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+.boxBig {
+  display: inline-block;
+  width: 100%;
+  background-image: url(../img/bg_star.png);
+  background-repeat: no-repeat;
+  // background-size: cover;
+  background-position: center center;
+}
+
+.box1000 {
+  display: inline-block;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0, auto;
+  @include clearfix();
+  text-align: left;
+}
+
+header {
+  display: inline-block;
+  width: 100%;
+  padding: 20px 0 15px 0;
+  @include clearfix();
+  background-color: $blue;
+
+  @include range-width(770px, 1025px) {
+    padding: 20px 15px 10px 15px;
+  }
+
+  @include range-width(0, 450px) {
+    padding: 12px 0 15px 0;
+  }
+}
+
+.menuBoxs {
+  display: inline-block;
+  width: 100%;
+  background-color: $blue_l;
+  padding: 10px 0;
+
+  &.pageMenuBoxs {
+    background-color: rgba(191, 186, 222, 1.00);
+  }
+}
+
+.menuBox {
+  display: inline-block;
+  width: 100%;
+  max-width: 1200px;
+  @include clearfix();
+}
+
+.visionBoxs {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+}
+
+.newBoxs {
+  display: inline-block;
+  width: 100%;
+  background: linear-gradient(rgba(186, 187, 225, 1.00), rgba(48, 65, 152, 1.00));
+  margin-top: 45px;
+  padding-bottom: 100px;
+  position: relative;
+
+  @include range-width(0, 450px) {
+    margin-top: 18px;
+    padding-bottom: 10px;
+  }
+}
+
+.newLinkBoxs {
+  display: inline-block;
+  width: 100%;
+  border-bottom: 2px dotted white;
+  padding: 15px 0;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.bannerBoxs {
+  display: inline-block;
+  width: 100%;
+  // height: 525px;
+  
+}
+
+footer {
+  display: inline-block;
+  width: 100%;
+  background-image: url(../img/footerBg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.titleBoxs {
+  display: inline-block;
+  width: 100%;
+  max-width: 1200px;
+  background-image: url(../img/pageTitleBg.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  margin-top: 30px;
+  @include clearfix();
+
+  @include range-width(0, 1025px) {
+    padding: 0 10px;
+  }
+
+  @include range-width(0, 450px) {
+    background-position: 27% 102%;
+    background-size: contain;
+    margin-top: 20px;
+  }
+}
+
+.centBoxs {
+  display: inline-block;
+  width: 100%;
+  max-width: 1200px;
+  background-color: rgba(215, 213, 234, 1.00);
+  min-height: 600px;
+  padding: 30px 0 180px 0;
+
+  @include range-width(0, 1025px) {
+    padding: 30px 15px 160px 15px;
+  }
+}
+
+// .m-menuBox {
+//   display: inline-block;
+//   width: 100%;
+//   padding: 0 15px;
+
+//   &:hover, &:active {
+//     .m-dropBox {
+//       display: inline-block;
+//     }
+//   }
+
+//   .m-dropBox {
+//     display: none;
+//     width: 100%;
+//     margin-top: 15px;
+//   }
+// }
+
+.m-menuBox {
+  display: none;
+  width: 100%;
+  padding: 0 15px;
+
+  &.m-menuBox-s {
+    display: inline-block;
+  }
+}
+
+.m-dropboxs {
+  &.m-dropboxs-s {
+    display: inline-block;
+  }
+  display: none;
+  width: 100%;
+}
+
+.blueBoxs {
+  display: inline-block;
+  width: 100%;
+  max-width: 1000px;
+  @include border-radius(10px);
+  background-color: $blue;
+  padding: 20px;
+}
+
+.page-news {
+  display: inline-block;
+  width: 100%;
+  border-bottom: 2px dotted white;
+  padding: 15px;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.pageBoxs {
+  display: inline-block;
+  width: 100%;
+  max-width: 1100px;
+  padding: 20px 0;
+
+  img {
+    display: inline-block;
+    width: 100%;
+    max-width: 1100px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
